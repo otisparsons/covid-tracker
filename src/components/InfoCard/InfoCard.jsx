@@ -1,11 +1,14 @@
 import React from "react";
 import styles from "./InfoCard.module.scss";
 
-const InfoCard = () => {
+const InfoCard = (props) => {
+  // const { cases, todayCases, deaths, recovered, todayRecovered } = props;
   return (
-    <>
-      <p>InfoCard works</p>
-    </>
+    <div>
+      {/* <h1>Cases:{cases}</h1>
+      <h2>Today Cases: {todayCases}</h2> */}
+      <p>Something</p>
+    </div>
   );
 };
 

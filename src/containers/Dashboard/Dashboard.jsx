@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./Dashboard.module.scss";
+import InfoCard from "../../components/InfoCard";
 
-const Dashboard = () => {
+const Dashboard = (item) => {
   return (
     <>
-      <p>Dashboard works</p>
+      <InfoCard />
     </>
   );
 };
