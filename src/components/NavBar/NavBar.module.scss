@@ -1,0 +1,21 @@
+.navBar {
+  width: 90vw;
+  height: 10vh;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5vh 5vw;
+
+  .header {
+    font-size: large;
+    text-align: left;
+    font-family: sans-serif;
+    margin: 1vh;
+  }
+
+  .github {
+    color: black;
+    margin-right: 20px;
+  }
+}

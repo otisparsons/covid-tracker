@@ -3,9 +3,10 @@ import styles from "./NavBar.module.scss";
 
 const NavBar = () => {
   return (
-    <>
-      <p>NavBar works</p>
-    </>
+    <nav className={styles.navBar}>
+      <header className={styles.header}>COVID 19 TRACKER</header>
+      <span className={styles.github}>GITHUB 1 GITHUB 2</span>
+    </nav>
   );
 };
 
