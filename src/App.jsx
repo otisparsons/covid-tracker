@@ -10,7 +10,7 @@ const App = () => {
     fetch("https://disease.sh/v3/covid-19/all")
       .then((response) => response.json())
       .then((x) => {
-        console.log(x)
+        console.log(x);
         setData(x);
       });
   };
@@ -18,15 +18,15 @@ const App = () => {
     getData();
   }, []);
 
-let dashboard = <Dashboard/>
-if (data) {
-  dashboard = <Dashboard data={data}/> 
-}
+  let dashboard = <Dashboard />;
+  if (data) {
+    dashboard = <Dashboard data={data} />;
+  }
 
   return (
     <div className="App">
       <NavBar />
-      <div>{dashboard}</div>
+      {dashboard}
     </div>
   );
 };
