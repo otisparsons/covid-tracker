@@ -38,36 +38,26 @@ const App = () => {
           Deaths: banana.deaths,
         }));
         setCountry(listAllCountries);
+        console.log(listAllCountries);
       });
   };
   useEffect(() => {
     getCountry();
   }, []);
 
-  // let somethingcountries = <CountryList />;
-  // if (data) {
-  //   somethingcountries = <CountryList data={data} />;
+  // const api_url = "https://disease.sh/v3/covid-19/countries";
+  // async function getCountryData() {
+  //   const response = await fetch(api_url);
+  //   const data = await response.json();
+  //   const { death, cases } = data;
+  //   document.getElementById("dia").textContent = death;
   // }
-
-  // const mappingOverData = () => {
-  //   const countries = getCountry();
-  //   const listCountries = countries.map((country) => {
-  //     return <listCountries country={country} />;
-  //   });
-  //   return <ul>{listCountries}</ul>;
-  // };
-
-  let countrylist = <CountryList />;
-  if (countrydata) {
-    countrylist = <CountryList countrydata={countrydata} />;
-  }
+  // getCountryData();
 
   return (
     <div className="App">
       <NavBar />
       {dashboard}
-      {countrylist}
-      <ul>{getCountry}</ul>
     </div>
   );
 };

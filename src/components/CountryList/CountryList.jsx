@@ -2,15 +2,16 @@ import React from "react";
 import styles from "./CountryList.module.scss";
 
 const CountryList = (props) => {
-  const { countrydata } = props;
-  // const { country.country } = props.countrydata;
+  // const { countrydata } = props;
+  // const { country, recovered } = props.countrydata;
 
   return (
-    <article className={styles.infoCards}>
-      <section className={styles.card}>
-        {/* <h3>Today Cases: {country.country}</h3> */}
-      </section>
-    </article>
+    <section className={styles.countrylist}>
+      <h2>Country:</h2>
+      <h2>Cases:</h2>
+      <h2>Recovered:</h2>
+      <h2>Deaths:</h2>
+    </section>
   );
 };
 export default CountryList;

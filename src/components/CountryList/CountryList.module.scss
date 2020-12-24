@@ -1,0 +1,11 @@
+.countrylist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+  min-width: 25w;
+  border: 2px solid black;
+  font-family: sans-serif;
+  margin: 5vh 5vw;
+  border-radius: 25px;
+}
