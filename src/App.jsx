@@ -29,14 +29,33 @@ const App = () => {
   const getCountry = () => {
     fetch("https://disease.sh/v3/covid-19/countries")
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setCountry(data);
+      .then((countrydata) => {
+        const listAllCountries = countrydata.map((banana) => ({
+          Country: banana.country,
+          TotalCases: banana.cases,
+          TodayCases: banana.todayCases,
+          Recovered: banana.recovered,
+          Deaths: banana.deaths,
+        }));
+        setCountry(listAllCountries);
       });
   };
   useEffect(() => {
     getCountry();
   }, []);
+
+  // let somethingcountries = <CountryList />;
+  // if (data) {
+  //   somethingcountries = <CountryList data={data} />;
+  // }
+
+  // const mappingOverData = () => {
+  //   const countries = getCountry();
+  //   const listCountries = countries.map((country) => {
+  //     return <listCountries country={country} />;
+  //   });
+  //   return <ul>{listCountries}</ul>;
+  // };
 
   let countrylist = <CountryList />;
   if (countrydata) {
@@ -48,6 +67,7 @@ const App = () => {
       <NavBar />
       {dashboard}
       {countrylist}
+      <ul>{getCountry}</ul>
     </div>
   );
 };
