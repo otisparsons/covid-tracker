@@ -26,28 +26,38 @@ const App = () => {
     dashboard = <Dashboard data={data} />;
   }
 
-  const getCountry = () => {
-    fetch("https://disease.sh/v3/covid-19/countries")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setCountry(data);
-      });
-  };
-  useEffect(() => {
-    getCountry();
-  }, []);
+  // const getCountry = () => {
+  //   fetch("https://disease.sh/v3/covid-19/countries")
+  //     .then((response) => response.json())
+  //     .then((countrydata) => {
+  //       const listAllCountries = countrydata.map((banana) => ({
+  //         Country: banana.country,
+  //         TotalCases: banana.cases,
+  //         TodayCases: banana.todayCases,
+  //         Recovered: banana.recovered,
+  //         Deaths: banana.deaths,
+  //       }));
+  //       setCountry(listAllCountries);
+  //       console.log(listAllCountries);
+  //     });
+  // };
+  // useEffect(() => {
+  //   getCountry();
+  // }, []);
 
-  let countrylist = <CountryList />;
-  if (countrydata) {
-    countrylist = <CountryList countrydata={countrydata} />;
-  }
+  // const api_url = "https://disease.sh/v3/covid-19/countries";
+  // async function getCountryData() {
+  //   const response = await fetch(api_url);
+  //   const data = await response.json();
+  //   const { death, cases } = data;
+  //   document.getElementById("dia").textContent = death;
+  // }
+  // getCountryData();
 
   return (
     <div className="App">
       <NavBar />
       {dashboard}
-      {countrylist}
     </div>
   );
 };
