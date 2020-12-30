@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./CountryList.module.scss";
 import { Component } from "react";
+import SearchBar from "../SearchBar";
 
 class CountryList extends Component {
   constructor(props) {
@@ -26,16 +27,19 @@ class CountryList extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <div className={styles.countrylist}>
-          <ul>
-            {items.map((item) => (
-              <li key={item.id}>
-                {item.country} | Cases: {item.cases} | Deaths: {item.deaths} |
-                Recovered: {item.recovered}
-              </li>
-            ))}
-            ;
-          </ul>
+        <div className={styles.countrycontainer}>
+          <SearchBar />
+          <div className={styles.countrylist}>
+            <ul>
+              {items.map((item) => (
+                <li key={item.id}>
+                  {item.country} | Cases: {item.cases} | Deaths: {item.deaths} |
+                  Recovered: {item.recovered}
+                </li>
+              ))}
+              ;
+            </ul>
+          </div>
         </div>
       );
     }
