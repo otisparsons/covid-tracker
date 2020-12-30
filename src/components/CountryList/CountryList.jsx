@@ -21,6 +21,8 @@ class CountryList extends Component {
         });
       });
   }
+
+
   render() {
     var { isLoaded, items } = this.state;
     if (!isLoaded) {
@@ -33,8 +35,8 @@ class CountryList extends Component {
             <ul>
               {items.map((item) => (
                 <li key={item.id}>
-                  {item.country} | Cases: {item.cases} | Deaths: {item.deaths} |
-                  Recovered: {item.recovered}
+                  {item.country} | Cases: {item.cases} | Deaths:{" "}
+                  {item.deaths} | Recovered: {item.recovered}
                 </li>
               ))}
               ;

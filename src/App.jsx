@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+
 import NavBar from "./components/NavBar";
 import Dashboard from "./containers/Dashboard";
 import InfoCard from "./components/InfoCard";
@@ -7,6 +8,7 @@ import CountryList from "./components/CountryList";
 
 const App = () => {
   const [data, setData] = useState([]);
+  const [searchText, setSearchText] = useState("");
   const [countrydata, setCountry] = useState([]);
 
   const getData = () => {
@@ -21,7 +23,7 @@ const App = () => {
     getData();
   }, []);
 
-  let dashboard = <Dashboard />;
+  let dashboard = <Dashboard setSearchText={setSearchText} />;
   if (data) {
     dashboard = <Dashboard data={data} />;
   }
@@ -29,30 +31,19 @@ const App = () => {
   // const getCountry = () => {
   //   fetch("https://disease.sh/v3/covid-19/countries")
   //     .then((response) => response.json())
-  //     .then((countrydata) => {
-  //       const listAllCountries = countrydata.map((banana) => ({
-  //         Country: banana.country,
-  //         TotalCases: banana.cases,
-  //         TodayCases: banana.todayCases,
-  //         Recovered: banana.recovered,
-  //         Deaths: banana.deaths,
-  //       }));
-  //       setCountry(listAllCountries);
-  //       console.log(listAllCountries);
+  //     .then((data) => {
+  //       console.log(data);
+  //       setCountry(data);
   //     });
   // };
   // useEffect(() => {
   //   getCountry();
   // }, []);
 
-  // const api_url = "https://disease.sh/v3/covid-19/countries";
-  // async function getCountryData() {
-  //   const response = await fetch(api_url);
-  //   const data = await response.json();
-  //   const { death, cases } = data;
-  //   document.getElementById("dia").textContent = death;
+  // let countrylist = <CountryList />;
+  // if (countrydata) {
+  //   countrylist = <CountryList countrydata={countrydata} />;
   // }
-  // getCountryData();
 
   return (
     <div className="App">
