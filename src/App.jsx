@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import Dashboard from "./containers/Dashboard";
 import InfoCard from "./components/InfoCard";
 import CountryList from "./components/CountryList";
+import SearchBar from "./components/SearchBar";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -49,6 +50,7 @@ const App = () => {
     <div className="App">
       <section className={styles.App}>
         <NavBar />
+        <SearchBar/>
         {dashboard}
       </section>
     </div>

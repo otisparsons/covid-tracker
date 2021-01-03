@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./CountryList.module.scss";
 import { Component } from "react";
 import SearchBar from "../SearchBar";
+
+
 
 class CountryList extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      
       search: "",
       items: [],
       isLoaded: false,
+      
     };
   }
   componentDidMount() {
@@ -23,9 +27,6 @@ class CountryList extends Component {
       });
   }
 
-  // updateSearch(event) {
-  //   this.setState({search: event.target.value.substr(0,20)});
-  // }
 
   render() {
     var { isLoaded, items } = this.state;
@@ -34,8 +35,9 @@ class CountryList extends Component {
     } else {
       return (
         <div className={styles.countrycontainer}>
-          <SearchBar />
+          
           <div className={styles.countrylist}>
+            
             <ul>
               {items.map((item) => (
                 <li key={item.id}>
