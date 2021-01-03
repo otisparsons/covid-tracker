@@ -3,9 +3,9 @@ import styles from "./Map.module.scss";
 
 const Map = () => {
   return (
-    <>
-      <p>Map works</p>
-    </>
+    <div className={styles.mapcontainer}>
+      <p>MAP</p>
+    </div>
   );
 };
 
