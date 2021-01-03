@@ -1,22 +1,45 @@
+@import "../../variables.scss";
+
 .navBar {
-  width: 90vw;
-  height: 10vh;
-  border: 2px solid black;
+  max-width: 100vw;
+  width: 100vw;
+  height: 40px;
+  border: $primary-border;
+  background-color: $secondary-background-color;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 5vh 5vw;
-  border-radius: 25px;
+  align-items: center;
+  padding: $base-padding;
+  overflow: hidden;
 
   .header {
-    font-size: large;
+    color: $secondary-color;
+    font-size: 30px;
     text-align: left;
     font-family: sans-serif;
-    margin: 1vh;
+    span {
+      color: $secondary-text;
+    }
   }
 
   .github {
-    color: black;
-    margin-right: 20px;
+    color: $secondary-text;
+    padding: 0 $base-padding;
+    color: $tertiary-text;
+    font-size: 20px;
+    font-weight: bold;
+    p {
+      color: $secondary-text;
+    }
+    span {
+      margin: $base-margin/2;
+    }
+    a {
+      color: $secondary-text;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
   }
 }

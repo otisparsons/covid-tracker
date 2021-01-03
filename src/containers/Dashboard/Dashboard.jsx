@@ -8,7 +8,7 @@ const Dashboard = (props) => {
 
   return (
     <article>
-      <h1 className={styles.header}>Covid 19 Dashboard</h1>
+      <h1 className={styles.header}></h1>
       <InfoCard data={data} />
       <CountryList countrydata={countrydata} />
     </article>
