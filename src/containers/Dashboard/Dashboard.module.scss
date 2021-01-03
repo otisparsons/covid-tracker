@@ -1,5 +1,20 @@
 @import "../../variables.scss";
 
-.header {
-  font-size: 20px;
+article {
+  .infopbox {
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    .leftcolumn {
+      margin: $base-margin;
+      width: 65vw;
+    }
+    .rightcolumn {
+      margin: $base-margin;
+      width: 35vw;
+    }
+  }
 }
