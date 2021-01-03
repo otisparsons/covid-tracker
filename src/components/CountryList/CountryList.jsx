@@ -3,17 +3,13 @@ import styles from "./CountryList.module.scss";
 import { Component } from "react";
 import SearchBar from "../SearchBar";
 
-
-
 class CountryList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
       search: "",
       items: [],
       isLoaded: false,
-      
     };
   }
   componentDidMount() {
@@ -27,7 +23,6 @@ class CountryList extends Component {
       });
   }
 
-
   render() {
     var { isLoaded, items } = this.state;
     if (!isLoaded) {
@@ -35,9 +30,7 @@ class CountryList extends Component {
     } else {
       return (
         <div className={styles.countrycontainer}>
-          
           <div className={styles.countrylist}>
-            
             <ul>
               {items.map((item) => (
                 <li key={item.id}>
@@ -46,7 +39,7 @@ class CountryList extends Component {
                 </li>
               ))}
               ;
-            </ul>
+            </ul>{" "}
           </div>
         </div>
       );
