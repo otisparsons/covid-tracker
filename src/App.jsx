@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./App.module.scss";
+import styles from "./App.module.scss";
 
 import NavBar from "./components/NavBar";
 import Dashboard from "./containers/Dashboard";
@@ -47,8 +47,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <NavBar />
-      {dashboard}
+      <section className={styles.App}>
+        <NavBar />
+        {dashboard}
+      </section>
     </div>
   );
 };

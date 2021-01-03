@@ -3,18 +3,20 @@ $base-padding: 10px;
 
 //TEXT
 $primary-text: black;
-$secondary-text: gray;
-$tertiary-text: rgb(199, 197, 197);
+$secondary-text: rgb(194, 194, 194);
+$tertiary-text: #666666;
 
 //COLORS
+$light-background: #f6f6f6;
 $primary-background-color: #2b2d2f;
 $secondary-background-color: #3f4043;
+$tertiary-background-color: #b4b4b4;
 $primary-color: #2b2d2f;
-$secondary-color: #c53529;
+$secondary-color: #f28d3d;
 $tertiary-color: rgb(141, 140, 140);
 
 //BORDER
 
-$primary-border: solid 2px #2b2d2f;
-$secondary-border: solid 2px #c53529;
+$primary-border: 2px solid #2b2d2f;
+$secondary-border: 2px solid #f28d3d;
 $border-rounding: 5px;

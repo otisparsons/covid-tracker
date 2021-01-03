@@ -6,7 +6,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 const NavBar = () => {
   return (
     <nav className={styles.navBar}>
-      <header className={styles.header}>COVID 19 TRACKER</header>
+      <header className={styles.header}>COVID 19 <span>TRACKER</span></header>
       <span className={styles.github}>
         <p>
           Built by Malwina
