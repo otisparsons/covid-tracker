@@ -7,7 +7,7 @@ class CountryList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: '',
+      search: "",
       items: [],
       isLoaded: false,
     };
@@ -39,8 +39,8 @@ class CountryList extends Component {
             <ul>
               {items.map((item) => (
                 <li key={item.id}>
-                  {item.country} | Cases: {item.cases} | Deaths:{" "}
-                  {item.deaths} | Recovered: {item.recovered}
+                  {item.country} | Cases: {item.cases} | Deaths: {item.deaths} |
+                  Recovered: {item.recovered}
                 </li>
               ))}
               ;
@@ -51,8 +51,6 @@ class CountryList extends Component {
     }
   }
 }
-
-
 
 export default CountryList;
 
