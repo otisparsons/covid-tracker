@@ -3,9 +3,11 @@ import styles from "./Dashboard.module.scss";
 import InfoCard from "../../components/InfoCard";
 import CountryList from "../../components/CountryList";
 import Map from "../../components/Map";
+import SearchBar from "../../components/SearchBar";
 
 const Dashboard = (props) => {
-  const { data, countrydata } = props;
+  const { data, countryData } = props;
+  console.log(countryData);
 
   return (
     <article>
@@ -17,7 +19,7 @@ const Dashboard = (props) => {
           <Map />
         </div>
         <div className={styles.rightcolumn}>
-          <CountryList countrydata={countrydata} />
+          <CountryList />
         </div>
       </section>
     </article>

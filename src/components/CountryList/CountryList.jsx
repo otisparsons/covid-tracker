@@ -9,9 +9,43 @@ class CountryList extends Component {
     this.state = {
       search: "",
       items: [],
+      filteredItems: [],
       isLoaded: false,
     };
   }
+
+  handleInputChange = () => {
+    const filter = this.state.items.filter((country) => {
+      return country.country.includes(this.search.value);
+    });
+
+    this.setState({ filteredItems: filter });
+
+    // console.log(this.state.filteredItems);
+
+    // console.log(filter);
+    // this.setState(
+    //   {
+    //     query: this.search.value,
+    //   },
+    //   () => {
+    //     if (this.state.query && this.state.query.length > 1) {
+    //       if (this.state.query.length % 2 === 0) {
+    //         this.getInfo();
+    //       }
+    //     }
+    //   }
+    // );
+  };
+
+  getInfo = (country) => {
+    const { data } = country;
+    const filteredCountries = data.filter(
+      (country) =>
+        country.country.toLowerCase() === this.state.query.toLowerCase
+    );
+  };
+
   componentDidMount() {
     fetch("https://disease.sh/v3/covid-19/countries")
       .then((res) => res.json())
@@ -23,30 +57,44 @@ class CountryList extends Component {
       });
   }
 
+  createJsx(countryArray) {
+    return countryArray.map((item) => (
+      <li key={item.id}>
+        <div>
+          <img src={item.countryInfo.flag} alt={item.country} />
+          <p>{item.country}</p> <p>Cases: {item.cases}</p>
+          <p>
+            Deaths:
+            {item.deaths}
+          </p>
+          <p>Recovered: {item.recovered}</p>
+        </div>
+      </li>
+    ));
+  }
+
   render() {
-    var { isLoaded, items } = this.state;
+    const { filteredItems, isLoaded, items, coun } = this.state;
+
+    const content =
+      filteredItems.length > 0
+        ? this.createJsx(filteredItems)
+        : this.createJsx(items);
+
     if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
       return (
         <div className={styles.countrycontainer}>
+          <form>
+            <input
+              placeholder="Search for..."
+              ref={(input) => (this.search = input)}
+              onChange={this.handleInputChange}
+            />
+          </form>
           <div className={styles.countrylist}>
-            <ul>
-              {items.map((item) => (
-                <li key={item.id}>
-                  <div>
-                    <img src={item.countryInfo.flag} alt={item.country} />
-                    <p>{item.country}</p> <p>Cases: {item.cases}</p>
-                    <p>
-                      Deaths:
-                      {item.deaths}
-                    </p>
-                    <p>Recovered: {item.recovered}</p>
-                  </div>
-                </li>
-              ))}
-              ;
-            </ul>
+            <ul>{content}</ul>
           </div>
         </div>
       );
@@ -56,15 +104,16 @@ class CountryList extends Component {
 
 export default CountryList;
 
-// const CountryList = (props) => {
-//   // const { countrydata } = props;
-//   // const { country, recovered } = props.countrydata;
-
-//   return <section className={styles.countrylist}></section>;
-// };
-// export default CountryList;
-
-//  <h2>Country:</h2>
-//   <h2>Cases:</h2>
-//   <h2>Recovered:</h2>
-//   <h2>Deaths:</h2>
+//    {items.map((item) => (
+//   <li key={item.id}>
+//     <div>
+//       <img src={item.countryInfo.flag} alt={item.country} />
+//       <p>{item.country}</p> <p>Cases: {item.cases}</p>
+//       <p>
+//         Deaths:
+//         {item.deaths}
+//       </p>
+//       <p>Recovered: {item.recovered}</p>
+//     </div>
+//   </li>
+// ))}

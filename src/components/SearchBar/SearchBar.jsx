@@ -1,29 +1,20 @@
 import React, { Component } from "react";
 import axios from "axios";
 import CountryPage from "../CountryPage";
-// import ReactDom from "react-dom";
-// import styles from "./SearchBar.module.scss";
-// import axios from "axios";
+import CountryList from "../CountryList";
 
-const { API_KEY } = process.env;
-const API_URL = "https://disease.sh/v3/covid-19/countries";
-console.log(API_KEY);
 class SearchBar extends Component {
   state = {
     query: "",
     results: [],
   };
 
-  getInfo = () => {
-    axios
-      .get(
-        `${API_URL}?api_key=${API_KEY}&prefix=${this.state.query}&limit=1000`
-      )
-      .then(({ data }) => {
-        this.setState({
-          results: data.data,
-        });
-      });
+  getInfo = (props) => {
+    const { data } = props;
+    const filteredCountries = data.filter(
+      (country) =>
+        country.country.toLowerCase() === this.state.query.toLowerCase
+    );
   };
   handleInputChange = () => {
     this.setState(
