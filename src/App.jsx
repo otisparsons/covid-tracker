@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import Dashboard from "./containers/Dashboard";
 import InfoCard from "./components/InfoCard";
 import CountryList from "./components/CountryList";
+import CountryPage from "./components/CountryPage";
 import SearchBar from "./components/SearchBar";
 
 const App = () => {
@@ -50,7 +51,7 @@ const App = () => {
     <div className="App">
       <section className={styles.App}>
         <NavBar />
-        <SearchBar/>
+        <SearchBar />
         {dashboard}
       </section>
     </div>
