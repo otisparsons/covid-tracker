@@ -16,6 +16,10 @@
     border: $secondary-border;
     background-color: $primary-background-color;
     box-shadow: $box-shadowing;
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
     h2 {
       font-size: 16px;
     }

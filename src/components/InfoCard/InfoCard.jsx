@@ -15,18 +15,33 @@ const InfoCard = (props) => {
   return (
     <article className={styles.infoCards}>
       <section className={styles.card}>
-        <h2>Total Cases: {cases}</h2>
-        <h3>Today Cases: {todayCases}</h3>
+        <div>
+          <h2>Total Cases:</h2> {cases}
+        </div>
+        <div>
+          <h2>Today Cases:</h2> {todayCases}
+        </div>
       </section>
 
       <section className={styles.card}>
-        <h2> Total Recovered: {recovered}</h2>
-        <h3> Today Recovered: {todayRecovered} </h3>
+        <div>
+          <h2> Total Recovered: </h2>
+          {recovered}
+        </div>
+        <div>
+          <h2> Today Recovered:</h2> {todayRecovered}
+        </div>
       </section>
 
       <section className={styles.card}>
-        <h2>Total Deaths: {deaths}</h2>
-        <h3>Today Deaths: {todayDeaths}</h3>
+        <div>
+          <h2>Total Deaths: </h2>
+          {deaths}
+        </div>
+        <div>
+          <h2>Today Deaths: </h2>
+          {todayDeaths}
+        </div>
       </section>
     </article>
   );

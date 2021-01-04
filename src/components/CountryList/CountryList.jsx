@@ -34,12 +34,19 @@ class CountryList extends Component {
             <ul>
               {items.map((item) => (
                 <li key={item.id}>
-                  {item.country} | Cases: {item.cases} | Deaths: {item.deaths} |
-                  Recovered: {item.recovered}
+                  <div>
+                    <img src={item.countryInfo.flag} alt={item.country} />
+                    <p>{item.country}</p> <p>Cases: {item.cases}</p>
+                    <p>
+                      Deaths:
+                      {item.deaths}
+                    </p>
+                    <p>Recovered: {item.recovered}</p>
+                  </div>
                 </li>
               ))}
               ;
-            </ul>{" "}
+            </ul>
           </div>
         </div>
       );
