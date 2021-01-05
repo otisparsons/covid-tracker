@@ -19,7 +19,7 @@ const App = () => {
   useEffect(() => {
     getData();
   }, []);
-
+    
   let dashboard = <Dashboard setSearchText={setSearchText} />;
   if (data) {
     dashboard = <Dashboard data={data} />;
