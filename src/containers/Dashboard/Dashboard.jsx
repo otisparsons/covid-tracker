@@ -3,7 +3,6 @@ import styles from "./Dashboard.module.scss";
 import InfoCard from "../../components/InfoCard";
 import CountryList from "../../components/CountryList";
 import Map from "../../components/Map";
-import SearchBar from "../../components/SearchBar";
 
 const Dashboard = (props) => {
   const { data, countryData } = props;
