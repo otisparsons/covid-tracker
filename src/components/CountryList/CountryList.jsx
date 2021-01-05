@@ -23,14 +23,6 @@ class CountryList extends Component {
     this.setState({ filteredItems: filter });
   };
 
-  // getInfo = (country) => {
-  //   const { data } = country;
-  //   const filteredCountries = data.filter(
-  //     (country) =>
-  //       country.country.toLowerCase() === this.state.query.toLowerCase
-  //   );
-  // };
-
   componentDidMount() {
     fetch("https://disease.sh/v3/covid-19/countries")
       .then((res) => res.json())
