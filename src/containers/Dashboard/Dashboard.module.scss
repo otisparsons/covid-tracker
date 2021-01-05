@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 article {
-  .infopbox {
+  .infobox {
   }
   .container {
     display: flex;
@@ -14,7 +14,13 @@ article {
     }
     .rightcolumn {
       margin: $base-margin;
-      width: 35vw;
+      height: 80vh;
+      .topRow {
+        height: 50%;
+      }
+      .bottomRow {
+        height: 50%;
+      }
     }
   }
 }

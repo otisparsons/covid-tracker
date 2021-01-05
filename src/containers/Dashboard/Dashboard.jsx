@@ -3,9 +3,10 @@ import styles from "./Dashboard.module.scss";
 import InfoCard from "../../components/InfoCard";
 import CountryList from "../../components/CountryList";
 import Map from "../../components/Map";
+import CasesGraph from "../../components/CasesGraph";
 
 const Dashboard = (props) => {
-  const { data, countryData } = props;
+  const { data, countryData, casesType } = props;
   console.log(countryData);
 
   return (
@@ -18,7 +19,12 @@ const Dashboard = (props) => {
           <Map />
         </div>
         <div className={styles.rightcolumn}>
+          <div className={styles.topRow}>
           <CountryList />
+          </div>
+          <div className={styles.bottomRow}>
+          <CasesGraph casesType={casesType}/>
+        </div>
         </div>
       </section>
     </article>
