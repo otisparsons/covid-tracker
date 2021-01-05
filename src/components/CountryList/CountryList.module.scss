@@ -1,87 +1,113 @@
 @import "../../variables.scss";
 
-.countrycontainer {
+.countryListcontainer {
   display: flex;
   flex-direction: column;
   // margin: 5vh 5vw;
-  border: 2px solid black;
+  // border: $primary-border;
   border-radius: $border-rounding;
   height: 60vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background-color: $primary-background-color;
-
-  &::-webkit-scrollbar {
-    width: 10px;
-    border-radius: $border-rounding;
-  }
-
-  /* Track */
-  &::-webkit-scrollbar-track {
-    border-radius: 0 $border-rounding $border-rounding 0;
-
-    background: #ececec;
-  }
-
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: $primary-color;
-    border-radius: $border-rounding;
-  }
-
-  /* Handle on hover */
-  &::-webkit-scrollbar-thumb:hover {
-    background: $secondary-color;
-  }
-
-  .countrylist {
+  background-color: $secondary-background-color;
+  .search {
+    margin: 0 $base-margin;
     display: flex;
-    flex-direction: row;
-    // gap: 20px;
-    min-width: 25w;
-    font-family: sans-serif;
-    text-align: left;
+    justify-content: flex-end;
+    padding: $base-padding;
+    input {
+      width: 6.5vw;
+      padding: $base-padding/2;
+      border: $secondary-border;
+      border-radius: $border-rounding;
+      background-color: $primary-background-color;
+      color: $tertiary-color;
 
-    ul {
+      &:focus {
+        outline: none;
+        border: $secondary-border;
+        background-color: rgb(235, 189, 151);
+        color: $primary-text;
+      }
+      &::placeholder {
+        color: $tertiary-text;
+      }
+    }
+  }
+  .countrycontainer {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: $primary-background-color;
+    border: $primary-border;
+    border-radius: 0 0 $border-rounding $border-rounding;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      border-radius: $border-rounding;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      border-radius: 0 $border-rounding $border-rounding 0;
+
+      background: #ececec;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $primary-color;
+      border-radius: $border-rounding;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: $secondary-color;
+    }
+
+    .countrylist {
       display: flex;
-      flex-direction: column;
-      list-style: none;
-      width: 100%;
+      flex-direction: row;
+      // gap: 20px;
+      min-width: 25w;
+      font-family: sans-serif;
+      text-align: left;
 
-      li {
-        // display: flex;
-        // flex-direction: row;
-        // // justify-content: space-between;
-        // text-align: left;
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 100%;
 
-        padding: $base-padding;
-        div {
-          display: flex;
-          flex-direction: row;
+        li {
+          padding: $base-padding;
+          div {
+            display: flex;
+            flex-direction: row;
 
-          p {
-            margin: 0 $base-margin/2;
-            &:first-child {
-              width: 80px;
+            p {
+              margin: 0 $base-margin/2;
+              &:first-child {
+                width: 40px;
+              }
+              &:nth-child(2) {
+                width: 5.5vw;
+              }
+              &:nth-child(3) {
+                width: 6.5vw;
+              }
+              &:nth-child(4) {
+                width: 6.5vw;
+              }
+              &:nth-child(5) {
+                width: 6.5vw;
+              }
             }
-            &:nth-child(2) {
-              width: 6.5vw;
-            }
-            &:nth-child(3) {
-              width: 6.5vw;
-            }
-            &:nth-child(4) {
-              width: 6.5vw;
-            }
-            &:nth-child(5) {
-              width: 6.5vw;
-            }
-          }
 
-          img {
-            width: 50px;
-            height: 20px;
-            padding: 0 10px;
+            img {
+              width: 50px;
+              height: 20px;
+              padding: 0 10px;
+            }
           }
         }
       }
