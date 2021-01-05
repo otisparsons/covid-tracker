@@ -8,18 +8,28 @@ article {
     flex-direction: row;
     justify-content: space-between;
     width: 100vw;
+    height: 80vh;
     .leftcolumn {
       margin: $base-margin;
       width: 65vw;
+      height: 70vh;
     }
     .rightcolumn {
+      display: flex;
+      flex-direction: column;
+      // margin: 5vh 5vw;
+      border: $primary-border;
+      border-radius: $border-rounding;
+      height: 100%;
       margin: $base-margin;
-      height: 80vh;
+      height: 70vh;
       .topRow {
         height: 50%;
       }
       .bottomRow {
         height: 50%;
+        padding: $base-padding;
+        background-color: $primary-background-color;
       }
     }
   }
