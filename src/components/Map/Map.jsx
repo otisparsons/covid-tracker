@@ -86,23 +86,26 @@ class Map extends Component {
     const { colors, countries_data, data_loaded, fields, query } = this.state;
 
     return data_loaded ? (
-      <div className={styles.root}>
-        <Legend
-          colors={colors}
-          fields={fields}
-          query={query}
-          handleSelectLegend={this.handleSetQuery}
-        />
+      <>
+        <div className={styles.legendContainer}>
+          <Legend
+            colors={colors}
+            fields={fields}
+            query={query}
+            handleSelectLegend={this.handleSetQuery}
+          />
+        </div>
+        <div className={styles.mapContainer}>
+          <MapVisual
+            colors={colors}
+            data={countries_data}
+            fields={fields}
+            query={query}
+          />
 
-        <MapVisual
-          colors={colors}
-          data={countries_data}
-          fields={fields}
-          query={query}
-        />
-
-        <div className={styles.footer}>Data source: About-Corona.Net</div>
-      </div>
+          <div className={styles.footer}>Data source: About-Corona.Net</div>
+        </div>
+      </>
     ) : null;
   }
 }

@@ -16,21 +16,21 @@ class Tooltip extends Component {
         closeButton={true}
         onClose={() => handleCloseTooltip()}
       >
-        <div className="map-tooltip">
-          <div className="map-tooltip-field">
+        <div className={styles.mapTooltip}>
+          <div className={styles.mapTooltipField}>
             <div
-              className="map-tooltip-flag"
+              className={styles.mapTooltipFlag}
               style={{ backgroundImage: `url(${details.flag})` }}
             />
-            <div className="map-tooltip-header">{details.name}</div>
+            <div className={styles.mapTooltipHeader}>{details.name}</div>
           </div>
 
-          <div className="margin" />
+          <div className={styles.margin} />
 
           {fields.map((field, index) => (
-            <div className="map-tooltip-field" key={index}>
-              <div className="map-tooltip-label">{field}:</div>
-              <div className="map-tooltip-value">
+            <div className={styles.mapTooltipField} key={index}>
+              <div className={styles.mapTooltipLabel}>{field}:</div>
+              <div className={styles.mapTooltipValue}>
                 {details[field].toString().replace(regex, ",")}
               </div>
             </div>

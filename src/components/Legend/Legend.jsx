@@ -10,10 +10,10 @@ class Legend extends Component {
     const { colors, fields, query } = this.props;
 
     return (
-      <div className="legend">
+      <div className={styles.legend}>
         {fields.map((field, index) => (
           <div
-            className="legend-field"
+            className={styles.legendField}
             key={index}
             onClick={this.handleSelectLegend.bind(this, field)}
           >

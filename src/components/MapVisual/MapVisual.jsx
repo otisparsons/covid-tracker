@@ -94,7 +94,7 @@ class MapVisual extends Component {
           return (
             <Marker key={index} longitude={longitude} latitude={latitude}>
               <div
-                className="map-marker"
+                className={styles.mapMarker}
                 style={{
                   backgroundColor: country.color,
                   height: country.size,
@@ -114,7 +114,7 @@ class MapVisual extends Component {
           />
         )}
 
-        <div className="map-nav">
+        <div className={styles.mapNav}>
           <NavigationControl
             onViewportChange={(viewport) => this.setState({ viewport })}
           />

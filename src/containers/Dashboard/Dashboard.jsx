@@ -15,9 +15,9 @@ const Dashboard = (props) => {
         <InfoCard data={data} />
       </div>
       <section className={styles.container}>
-        {/* <div className={styles.leftcolumn}> */}
-        <Map />
-        {/* </div> */}
+        <div className={styles.leftcolumn}>
+          <Map />
+        </div>
 
         <div className={styles.rightcolumn}>
           <div className={styles.topRow}>

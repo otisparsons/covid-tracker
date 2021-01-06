@@ -1,11 +1,23 @@
 @import "../../variables.scss";
+.legendContainer {
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: flex;
+  width: 100%;
+}
+.mapContainer {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
 
-// .mapcontainer {
-//   display: flex;
-//   flex-direction: column;
-//   background-color: $primary-background-color;
-//   // margin: 5vh 5vw;
-//   border: $primary-border;
-//   border-radius: $border-rounding;
-//   height: 60vh;
-// }
+.footer {
+  bottom: 8px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 12px;
+  right: 8px;
+  position: absolute;
+  z-index: 1;
+}
