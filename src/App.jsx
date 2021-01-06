@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styles from "./App.module.scss";
-import CasesGraph from "./components/CasesGraph";
 
 import NavBar from "./components/NavBar";
 import Dashboard from "./containers/Dashboard";
@@ -9,6 +8,7 @@ const App = () => {
   const [data, setData] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [casesType, setCasesType] = useState("cases");
+  const [countries, setCountries] = useState([]);
 
   const getData = () => {
     fetch("https://disease.sh/v3/covid-19/all")

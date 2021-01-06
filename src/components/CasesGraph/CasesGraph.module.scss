@@ -1,1 +1,21 @@
 @import "../../variables.scss";
+.worldwideContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  h3 {
+    display: flex;
+    padding: $base-padding/2;
+    margin-bottom: $base-margin/2;
+    font-size: 1.2rem;
+    color: $tertiary-text;
+    span {
+      padding-right: $base-padding;
+    }
+  }
+  .graph {
+    width: auto;
+    height: 100%;
+  }
+}
