@@ -2,11 +2,10 @@ import React from "react";
 import styles from "./Dashboard.module.scss";
 import InfoCard from "../../components/InfoCard";
 import CountryList from "../../components/CountryList";
-import Map from "../../components/Map";
 import CasesGraph from "../../components/CasesGraph";
 
 const Dashboard = (props) => {
-  const { data, casesType, mapCountries, mapCenter, mapZoom } = props;
+  const { data, casesType } = props;
   console.log(casesType);
 
   return (
@@ -15,14 +14,7 @@ const Dashboard = (props) => {
         <InfoCard data={data} />
       </div>
       <section className={styles.container}>
-        <div className={styles.leftcolumn}>
-          <Map
-            countries={mapCountries}
-            casesType={casesType}
-            center={mapCenter}
-            zoom={mapZoom}
-          />
-        </div>
+        <div className={styles.leftcolumn}></div>
         <div className={styles.rightcolumn}>
           <div className={styles.topRow}>
             <CountryList />
