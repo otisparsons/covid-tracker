@@ -1,0 +1,32 @@
+.mapTooltip {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.mapTooltipField {
+  display: flex;
+  align-items: center;
+}
+
+.mapTooltipFlag {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 18px;
+  margin-right: 8px;
+  min-width: 28px;
+}
+
+.mapTooltipHeader {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.mapTooltipLabel {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 11px;
+  margin-right: 8px;
+  text-transform: uppercase;
+}

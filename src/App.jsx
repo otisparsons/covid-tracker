@@ -3,6 +3,7 @@ import styles from "./App.module.scss";
 
 import NavBar from "./components/NavBar";
 import Dashboard from "./containers/Dashboard";
+import Map from "./components/Map";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -32,6 +33,9 @@ const App = () => {
       <section className={styles.App}>
         <NavBar />
         {dashboard}
+        <div className={styles.map}>
+          <Map />
+        </div>
       </section>
     </div>
   );
