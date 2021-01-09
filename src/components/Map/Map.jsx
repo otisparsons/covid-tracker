@@ -102,6 +102,8 @@ class Map extends Component {
             fields={fields}
             query={query}
           />
+
+          <div className={styles.footer}>Data source: About-Corona.Net</div>
         </div>
       </>
     ) : null;

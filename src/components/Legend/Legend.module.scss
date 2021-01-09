@@ -17,6 +17,26 @@
 //   display: flex;
 //   justify-content: center;
 // }
+  padding: $base-padding;
+  align-items: center;
+  color: white;
+  width: 100%;
+  padding: $base-padding;
+  background-color: $primary-background-color;
+  display: flex;
+  height: 40px;
+  justify-content: space-around;
+  position: absolute;
+  width: 350px;
+  z-index: 1;
+}
+
+.legendField {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
 
 .legend-icon {
   border-color: transparent;
