@@ -86,7 +86,7 @@ class Map extends Component {
     const { colors, countries_data, data_loaded, fields, query } = this.state;
 
     return data_loaded ? (
-      <>
+      <section className={styles.container}>
         <div className={styles.legendContainer}>
           <Legend
             colors={colors}
@@ -103,9 +103,8 @@ class Map extends Component {
             query={query}
           />
 
-          <div className={styles.footer}>Data source: About-Corona.Net</div>
         </div>
-      </>
+      </section>
     ) : null;
   }
 }

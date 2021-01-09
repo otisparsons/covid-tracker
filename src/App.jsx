@@ -33,11 +33,10 @@ const App = () => {
       <section className={styles.App}>
         <NavBar />
         {dashboard}
-        <div className={styles.map}>
-          <Map />
-        </div>
+
       </section>
     </div>
+  
   );
 };
 
