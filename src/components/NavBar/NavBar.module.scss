@@ -29,17 +29,35 @@
     padding: 0 $base-padding;
     color: $tertiary-text;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
     p {
       color: $secondary-text;
     }
     span {
       margin: $base-margin/2;
+      white-space: nowrap;
     }
     a {
       color: $secondary-text;
+      margin-left: 5px;
       &:hover {
         color: $secondary-color;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navBar {
+    height: 80px;
+    .header {
+      font-size: 18px;
+    }
+
+    .github {
+      p {
+        font-size: 16px;
+        text-align: right;
       }
     }
   }

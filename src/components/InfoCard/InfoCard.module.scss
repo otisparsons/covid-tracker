@@ -28,3 +28,16 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .infoCards {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    .card {
+      width: $width;
+    }
+  }
+}

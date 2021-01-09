@@ -6,13 +6,12 @@ article {
   .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
     height: 70vh;
+
     .leftcolumn {
       border: $primary-border;
       border-radius: $border-rounding;
-      background-color: $primary-background-color;
+      background-color: $secondary-background-color;
       margin: $base-margin;
       width: 65vw;
       height: 70vh;
@@ -20,7 +19,6 @@ article {
     .rightcolumn {
       display: flex;
       flex-direction: column;
-      // margin: 5vh 5vw;
       border: $primary-border;
       border-radius: $border-rounding;
       height: 100%;
@@ -28,11 +26,31 @@ article {
       height: 70vh;
       .topRow {
         height: 50%;
+        border-radius: $border-rounding $border-rounding 0 0;
       }
       .bottomRow {
         height: 50%;
         padding: $base-padding;
         background-color: $primary-background-color;
+        border-radius: 0 0 $border-rounding $border-rounding;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  article {
+    display: flex;
+    flex-direction: column;
+    .container {
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 5vh;
+      .leftcolumn,
+      .rightcolumn {
+        width: $width;
       }
     }
   }

@@ -13,14 +13,16 @@ const NavBar = () => {
       </header>
       <span className={styles.github}>
         <p>
-          Built by Malwina
+          Built by
           <span>
+            Malwina
             <a href="https://github.com/wowermalwina">
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </span>
-          and Otis
+          and
           <span>
+            Otis
             <a href="https://github.com/otisparsons">
               <FontAwesomeIcon icon={faGithub} />
             </a>
