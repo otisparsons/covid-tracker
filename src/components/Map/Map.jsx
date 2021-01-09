@@ -102,7 +102,6 @@ class Map extends Component {
             fields={fields}
             query={query}
           />
-
         </div>
       </section>
     ) : null;
