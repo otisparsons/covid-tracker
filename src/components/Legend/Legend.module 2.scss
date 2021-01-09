@@ -1,0 +1,43 @@
+@import "../../variables.scss";
+
+.legend {
+  width: 100%;
+  align-items: center;
+  color: white;
+  display: flex;
+  height: 40px;
+  justify-content: space-around;
+  // position: absolute;
+  z-index: 1;
+}
+
+// .legendField {
+//   align-items: center;
+//   cursor: pointer;
+//   display: flex;
+//   justify-content: center;
+// }
+
+.legend-icon {
+  border-color: transparent;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  height: 10px;
+  margin-right: 8px;
+  width: 10px;
+}
+
+.legend-icon-active {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.legend-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.legend-label-active {
+  color: rgba(255, 255, 255, 1);
+}
