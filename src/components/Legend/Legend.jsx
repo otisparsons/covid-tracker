@@ -13,7 +13,7 @@ class Legend extends Component {
       <div className={styles.legend}>
         {fields.map((field, index) => (
           <div
-            className={styles.legendField}
+            // className={styles.legendField}
             key={index}
             onClick={this.handleSelectLegend.bind(this, field)}
           >

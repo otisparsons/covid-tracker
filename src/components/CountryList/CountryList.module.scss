@@ -5,13 +5,14 @@
   flex-direction: column;
   outline: $primary-border;
   height: 100%;
-  background-color: $secondary-background-color;
+  // background-color: $secondary-background-color;
   border-bottom: $primary-border;
   .search {
     margin: 0 $base-margin;
     display: flex;
     justify-content: flex-end;
     padding: $base-padding;
+    height: 10vh;
     input {
       width: 6.5vw;
       padding: $base-padding/2;
