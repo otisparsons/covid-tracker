@@ -37,7 +37,7 @@ class CountryList extends Component {
   createJsx(countryArray) {
     return countryArray.map((item) => (
       <li key={item.id}>
-        <div>
+        <div key={item.id}>
           <img src={item.countryInfo.flag} alt={item.country} />
           <p>{item.country}</p> <p>Cases: {item.cases}</p>
           <p>
