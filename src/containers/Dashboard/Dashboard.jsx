@@ -7,7 +7,7 @@ import Map from "../../components/Map";
 
 const Dashboard = (props) => {
   const { data, casesType } = props;
-  console.log(casesType);
+  // console.log(casesType);
 
   return (
     <article>
