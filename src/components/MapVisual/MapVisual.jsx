@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import ReactMapGL, { Marker, NavigationControl } from "react-map-gl";
 import styles from "./MapVisual.module.scss";
 import "mapbox-gl/dist/mapbox-gl.css";
+import "mapbox-gl"
 
 import Tooltip from "../Tooltip";
 
 const TOKEN =
-  "pk.eyJ1Ijoiam9udGF5eXciLCJhIjoiY2s4aXcwbnA0MGFqYjNscDZicm9haXA3cCJ9.rI3D6Y4ZETQnYukX9RCOow";
+  "pk.eyJ1Ijoib3Rpc3BhcnNvbnMiLCJhIjoiY2tqeDg5M2N0MDE2ODJvbW5uYjlkOXR1biJ9.-dORMCZVh61_pPi9PJOVKA";
 
 const initialState = {
   map_data: [],
@@ -85,7 +86,7 @@ class MapVisual extends Component {
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={TOKEN}
-        mapStyle="mapbox://styles/mapbox/dark-v10"
+        mapStyle="mapbox://styles/mapbox/light-v10"
         onViewportChange={(viewport) => this.setState({ viewport })}
       >
         {map_data.map((country, index) => {
