@@ -3,7 +3,7 @@ import ReactMapGL, { Marker, NavigationControl } from "react-map-gl";
 import styles from "./MapVisual.module.scss";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "mapbox-gl"
-
+import mapboxgl from "mapbox-gl";
 import Tooltip from "../Tooltip";
 
 const TOKEN =
@@ -86,7 +86,7 @@ class MapVisual extends Component {
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={TOKEN}
-        mapStyle="mapbox://styles/mapbox/light-v10"
+        mapStyle="mapbox://styles/notalemesa/ck8dqwdum09ju1ioj65e3ql3k"
         onViewportChange={(viewport) => this.setState({ viewport })}
       >
         {map_data.map((country, index) => {
