@@ -4,8 +4,10 @@ import axios from "axios";
 import { coordinates } from "../../country_coordinates";
 import Legend from "../Legend";
 import MapVisual from "../MapVisual";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 import styles from "./Map.module.scss";
+
 
 const initialState = {
   colors: [
