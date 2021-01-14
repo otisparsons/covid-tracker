@@ -5,6 +5,9 @@ import NavBar from "./components/NavBar";
 import Dashboard from "./containers/Dashboard";
 import Map from "./components/Map";
 
+//
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 const App = () => {
   const [data, setData] = useState([]);
   const [searchText, setSearchText] = useState("");
