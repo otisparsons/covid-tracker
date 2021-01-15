@@ -85,7 +85,7 @@ class MapVisual extends Component {
     return (
       <ReactMapGL
         {...viewport}
-        mapboxApiAccessToken={TOKEN}
+        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
         mapStyle="mapbox://styles/notalemesa/ck8dqwdum09ju1ioj65e3ql3k"
         onViewportChange={(viewport) => this.setState({ viewport })}
       >
