@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import ReactMapGL, { Marker, NavigationControl } from "react-map-gl";
 import styles from "./MapVisual.module.scss";
 import "mapbox-gl/dist/mapbox-gl.css";
-import "mapbox-gl"
-import mapboxgl from "mapbox-gl";
 import Tooltip from "../Tooltip";
 import ReactMapGL from "react-map-gl";
 import mapboxgl from "mapbox-gl"; 
