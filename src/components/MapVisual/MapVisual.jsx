@@ -5,6 +5,10 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import "mapbox-gl"
 import mapboxgl from "mapbox-gl";
 import Tooltip from "../Tooltip";
+import ReactMapGL from "react-map-gl";
+import mapboxgl from "mapbox-gl"; 
+
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const TOKEN =
   "pk.eyJ1Ijoib3Rpc3BhcnNvbnMiLCJhIjoiY2tqeDg5M2N0MDE2ODJvbW5uYjlkOXR1biJ9.-dORMCZVh61_pPi9PJOVKA";
